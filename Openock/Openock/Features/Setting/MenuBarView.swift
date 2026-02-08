@@ -63,7 +63,7 @@ private struct Header: View {
       HStack {
         Spacer()
         Button(action: {
-          if let url = URL(string: "https://posacademy.notion.site/Openock-2ab2b843d5af808db88af411ee6c9807?source=copy_link") {
+          if let url = URL(string: "https://maengjj.notion.site/BOSO-2ed3420839d780728a5fd38c56b30f87") {
             NSWorkspace.shared.open(url)
           }
         }, label: {
