@@ -101,6 +101,7 @@
 				3E887E412EADB7DE00A33566 /* Frameworks */,
 				3E887E422EADB7DE00A33566 /* Resources */,
 				AC238B532EBA16BC004643C7 /* Embed Libraries */,
+				AC238B602EBD2000004643C7 /* Copy TFLite dSYM */,
 			);
 			buildRules = (
 			);
@@ -163,6 +164,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC238B602EBD2000004643C7 /* Copy TFLite dSYM */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(PROJECT_DIR)/dSYMs/libtensorflowlite_c.dylib.dSYM/Contents/Info.plist",
+				"$(PROJECT_DIR)/dSYMs/libtensorflowlite_c.dylib.dSYM/Contents/Resources/DWARF/libtensorflowlite_c.dylib",
+			);
+			name = "Copy TFLite dSYM";
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/libtensorflowlite_c.dylib.dSYM/Contents/Info.plist",
+				"$(BUILT_PRODUCTS_DIR)/libtensorflowlite_c.dylib.dSYM/Contents/Resources/DWARF/libtensorflowlite_c.dylib",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/libtensorflowlite_c.dylib.dSYM/Contents/Resources/DWARF\"\ncp \"${PROJECT_DIR}/dSYMs/libtensorflowlite_c.dylib.dSYM/Contents/Info.plist\" \"${BUILT_PRODUCTS_DIR}/libtensorflowlite_c.dylib.dSYM/Contents/Info.plist\"\ncp \"${PROJECT_DIR}/dSYMs/libtensorflowlite_c.dylib.dSYM/Contents/Resources/DWARF/libtensorflowlite_c.dylib\" \"${BUILT_PRODUCTS_DIR}/libtensorflowlite_c.dylib.dSYM/Contents/Resources/DWARF/libtensorflowlite_c.dylib\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E887E402EADB7DE00A33566 /* Sources */ = {
